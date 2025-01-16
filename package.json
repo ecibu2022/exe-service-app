@@ -1,0 +1,33 @@
+{
+  "name": "exe-service-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "files": [
+    "app.js",
+    "styles/*"
+  ],
+  "keywords": [],
+  "author": "Ecibu Michael",
+  "license": "ISC",
+  "description": "This is my first-exe app",
+  "bin": {
+    "exe-service-app": "app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "pkg": {
+    "assets": "styles/*",
+    "targets": [
+      "host"
+    ],
+    "outputPath": "pkg"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

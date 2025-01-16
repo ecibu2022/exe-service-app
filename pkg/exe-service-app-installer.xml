@@ -1,0 +1,20 @@
+<service>
+<id>exe-service-app</id>
+<name>exe-service-app</name>
+<description>This is my first exe-service-app</description>
+<env name="EXE_SERVICE_APP_HOME" value="%BASE%"/>
+<env name="EXE_SERVICE_APP_APPDATA_PATH" value="%ALLUSERSPROFILE%\exe-service-app\"/>
+<env name="EXE_SERVICE_APP_LOGS_PATH" value="%ALLUSERSPROFILE%\exe-service-app\logs"/>
+<env name="EXE_SERVICE_APP_CONFIG_PATH" value="%ALLUSERSPROFILE%\exe-service-app\config"/>
+<env name="EXE_SERVICE_APP_HTTP_PORT" value="5000"/>
+<env name="EXE_SERVICE_APP_HTTPS_PORT" value="6000"/>
+<env name="NODE_ENV" value="production"/>
+<executable>%BASE%\exe-service-app.exe</executable>
+<arguments>start</arguments>
+<logpath>%ALLUSERSPROFILE%\exe-service-app\logs</logpath>
+<log mode="roll-by-size-time">
+<sizeThreshold>10240</sizeThreshold>
+<pattern>yyyyMMddHHmmss</pattern>
+<autoRollAtTime>00:00:00</autoRollAtTime>
+</log>
+</service>
