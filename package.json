@@ -6,10 +6,6 @@
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
-  "files": [
-    "app.js",
-    "styles/*"
-  ],
   "keywords": [],
   "author": "Ecibu Michael",
   "license": "ISC",
@@ -22,9 +18,7 @@
   },
   "pkg": {
     "assets": "styles/*",
-    "targets": [
-      "host"
-    ],
+    "targets": ["host"],
     "outputPath": "pkg"
   },
   "devDependencies": {

@@ -11,6 +11,7 @@
 <env name="NODE_ENV" value="production"/>
 <executable>%BASE%\exe-service-app.exe</executable>
 <arguments>start</arguments>
+<startmode>Automatic</startmode>
 <logpath>%ALLUSERSPROFILE%\exe-service-app\logs</logpath>
 <log mode="roll-by-size-time">
 <sizeThreshold>10240</sizeThreshold>

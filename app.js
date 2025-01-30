@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 // Serve static files (for CSS)
-app.use(express.static("styles"));
+app.use('/', express.static(__dirname + '/styles'));
 
 // Route to serve the main page
 app.get('/', (req, res) => {

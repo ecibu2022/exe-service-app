@@ -84,6 +84,23 @@ To run the application, follow these steps:
     pkg app.js --targets win --output AppName.exe
     ```
 
+5. Add static files or assets in pkg configuration
+Add the following in your app.js which serves the css files
+    // __dirname is used here along with package.json.pkg.assets
+    // see https://github.com/zeit/pkg#config and
+    // https://github.com/zeit/pkg#snapshot-filesystem
+    app.use('/', express.static(__dirname + '/folder_name'));
+
+    and in package.json
+    
+```bash
+  "pkg": {
+    "assets": "styles/*",
+    "targets": ["host"],
+    "outputPath": "pkg"
+  }
+```
+
 ### 5. Installing Your App as a Service (Windows Service)
 
 This allows your app to run as a service in the background, even if the editor is closed.
